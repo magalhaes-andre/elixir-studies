@@ -1,7 +1,7 @@
 defmodule Printer do
   def print(words) when is_list(words) do
     words
-    |> Enum.each(fn(word) -> String.capitalize(word) end)
+    |> Enum.map(fn(word) -> String.capitalize(word) end)
     |> Enum.join(" - ")
     |> print
   end
